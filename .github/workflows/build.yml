@@ -29,18 +29,12 @@ jobs:
         run:
           sed -ni '/https:\/\/maven.aliyun.com\/repository\/public/{h;n;/https:\/\/repo1.maven.org\/maven2/!{:a;N;/https:\/\/maven.aliyun.com\/repository\/public/!ba;x;H;n};x;H;x};p' repositories
           
-      - name: Build Bungee
+      - name: Build bukkit
         uses: gradle/gradle-command-action@v1
         with:
-          arguments: :bungee:ShadowJar
+          arguments: :bukkit:ShadowJar
           gradle-version: 7.4
           
-      - name: Build Velocity
-        uses: gradle/gradle-command-action@v1
-        with:
-          arguments: :velocity:ShadowJar
-          gradle-version: 7.4
-
       - name: Cleanup Gradle Cache
         run: |
           rm -f ~/.gradle/caches/modules-2/modules-2.lock
