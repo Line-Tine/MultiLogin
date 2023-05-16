@@ -6,5 +6,5 @@ id: -1
 
 # Don't change it unless you really want to.
 hasJoined:
-  blessingSkin:
-    apiRoot: 'https://littleskin.cn/api/yggdrasil'
+  LineTineskin:
+    apiRoot: 'https://skin.line-tine.com:3443/api/yggdrasil'
